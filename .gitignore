@@ -10,8 +10,6 @@
 #---------------------------
 # Ignore all plugins
 /plugins/*
-!/plugins/
-
 #---------------------------
 # MU plugins: these are
 # managed by the platform.
