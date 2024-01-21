@@ -2,8 +2,7 @@
 # Themes
 #---------------------------
 /themes/*
-!/themes/qorp-theme
-
+!/themes/empuls3
 #---------------------------
 # Plugins
 # Check out WPE's Smart
@@ -11,7 +10,7 @@
 #---------------------------
 # Ignore all plugins
 /plugins/*
-!/plugins/empuls3
+!/plugins/
 
 #---------------------------
 # MU plugins: these are
