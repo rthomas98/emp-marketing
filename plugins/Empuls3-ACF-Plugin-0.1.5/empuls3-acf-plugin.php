@@ -29,3 +29,9 @@ require 'includes/acf-settings-page.php';
 require 'includes/acf-restrict-access.php';
 // Display and template helpers.
 require 'includes/template-tags.php';
+
+// Enqueue Tailwind CSS
+function enqueue_tailwind_css() {
+    wp_enqueue_style('tailwindcss', plugin_dir_url(__FILE__) . 'dist/styles.css');
+}
+add_action('wp_enqueue_scripts', 'enqueue_tailwind_css');
