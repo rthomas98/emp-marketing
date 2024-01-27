@@ -5,12 +5,12 @@
  * @link https://www.advancedcustomfields.com/resources/local-json/
  */
 
-add_filter( 'acf/json/load_paths', 'demo_acf_json_load_paths' );
-add_filter( 'acf/settings/save_json/type=acf-field-group', 'demo_acf_json_save_path_for_field_groups' );
-add_filter( 'acf/settings/save_json/type=acf-ui-options-page', 'demo_acf_json_save_path_for_option_pages' );
-add_filter( 'acf/settings/save_json/type=acf-post-type', 'demo_acf_json_save_path_for_post_types' );
-add_filter( 'acf/settings/save_json/type=acf-taxonomy', 'demo_acf_json_save_path_for_taxonomies' );
-add_filter( 'acf/json/save_file_name', 'demo_acf_json_filename', 10, 3 );
+add_filter( 'acf/json/load_paths', 'empuls3_json_load_paths' );
+add_filter( 'acf/settings/save_json/type=acf-field-group', 'empuls3_json_save_path_for_field_groups' );
+add_filter( 'acf/settings/save_json/type=acf-ui-options-page', 'empuls3_json_save_path_for_option_pages' );
+add_filter( 'acf/settings/save_json/type=acf-post-type', 'empuls3_json_save_path_for_post_types' );
+add_filter( 'acf/settings/save_json/type=acf-taxonomy', 'empuls3_json_save_path_for_taxonomies' );
+add_filter( 'acf/json/save_file_name', 'empuls3_json_filename', 10, 3 );
 
 /**
  * Set a custom ACF JSON load path.
@@ -23,7 +23,7 @@ add_filter( 'acf/json/save_file_name', 'demo_acf_json_filename', 10, 3 );
  *
  * @since 0.1.1
  */
-function demo_acf_json_load_paths( $paths ) {
+function empuls3_json_load_paths( $paths ) {
 	$paths[] = DEMO_ACF_PLUGIN_DIR . '/acf-json/field-groups';
 	$paths[] = DEMO_ACF_PLUGIN_DIR . '/acf-json/options-pages';
 	$paths[] = DEMO_ACF_PLUGIN_DIR . '/acf-json/post-types';
@@ -42,7 +42,7 @@ function demo_acf_json_load_paths( $paths ) {
  *
  * @since 0.1.1
  */
-function demo_acf_json_save_path_for_post_types() {
+function empuls3_json_save_path_for_post_types() {
 	return DEMO_ACF_PLUGIN_DIR . '/acf-json/post-types';
 }
 
@@ -56,7 +56,7 @@ function demo_acf_json_save_path_for_post_types() {
  *
  * @since 0.1.1
  */
-function demo_acf_json_save_path_for_field_groups() {
+function empuls3_json_save_path_for_field_groups() {
 	return DEMO_ACF_PLUGIN_DIR . '/acf-json/field-groups';
 }
 
@@ -70,7 +70,7 @@ function demo_acf_json_save_path_for_field_groups() {
  *
  * @since 0.1.1
  */
-function demo_acf_json_save_path_for_taxonomies() {
+function empuls3_json_save_path_for_taxonomies() {
 	return DEMO_ACF_PLUGIN_DIR . '/acf-json/taxonomies';
 }
 
@@ -84,7 +84,7 @@ function demo_acf_json_save_path_for_taxonomies() {
  *
  * @since 0.1.1
  */
-function demo_acf_json_save_path_for_option_pages() {
+function empuls3_json_save_path_for_option_pages() {
 	return DEMO_ACF_PLUGIN_DIR . '/acf-json/options-pages';
 }
 
@@ -100,7 +100,7 @@ function demo_acf_json_save_path_for_option_pages() {
  *
  * @since  0.1.1
  */
-function demo_acf_json_filename( $filename, $post ) {
+function empuls3_json_filename( $filename, $post ) {
 	$filename = str_replace(
 		array(
 			' ',

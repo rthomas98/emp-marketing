@@ -17,7 +17,7 @@ if ( ! empty( $block['anchor'] ) ) {
 	$block_id = esc_attr( $block['anchor'] );
 }
 
-$phone_number = get_field( 'demo_acf_phone_number', 'options' );
+$phone_number = get_field( 'empuls3_phone_number', 'options' );
 ?>
 
 <?php if ( ! $is_preview ) : ?>

@@ -9,10 +9,10 @@
  * Check if ACF PRO is active and function exists.
  */
 if ( function_exists( 'acf_add_options_page' ) ) {
-	add_action( 'acf/init', 'demo_acf_register_options_page' );
+	add_action( 'acf/init', 'empuls3_register_options_page' );
 }
 
-function demo_acf_register_options_page() {
+function empuls3_register_options_page() {
 	// Add the top-level page.
 	acf_add_options_page(
 		array(
@@ -40,7 +40,7 @@ function demo_acf_register_options_page() {
 				array(
 					'key'           => 'field_6511a57fcbe7e',
 					'label'         => 'Phone Number',
-					'name'          => 'demo_acf_phone_number',
+					'name'          => 'empuls3_phone_number',
 					'type'          => 'text',
 					'default_value' => '555 123-4567',
 				),
@@ -65,7 +65,7 @@ function demo_acf_register_options_page() {
 				array(
 					'key'        => 'field_6511a5e897814',
 					'label'      => 'Notification Bar',
-					'name'       => 'demo_acf_notification_bar_group',
+					'name'       => 'empuls3_notification_bar_group',
 					'aria-label' => '',
 					'type'       => 'group',
 					'layout'     => 'row',
@@ -73,7 +73,7 @@ function demo_acf_register_options_page() {
 						array(
 							'key'           => 'field_6511a5f597815',
 							'label'         => 'Notification On/Off',
-							'name'          => 'demo_acf_notification_onoff',
+							'name'          => 'empuls3_notification_onoff',
 							'type'          => 'true_false',
 							'message'       => 'Should the site-wide Notification Bar be showing?',
 							'default_value' => 1,
@@ -84,12 +84,12 @@ function demo_acf_register_options_page() {
 						array(
 							'key'               => 'field_6511a5f597816',
 							'label'             => 'Notification Message',
-							'name'              => 'demo_acf_notification_message',
+							'name'              => 'empuls3_notification_message',
 							'type'              => 'textarea',
 							'conditional_logic' => array(
 								array(
 									array(
-										'field'    => 'demo_acf_notification_onoff',
+										'field'    => 'empuls3_notification_onoff',
 										'operator' => '==',
 										'value'    => '1',
 									),

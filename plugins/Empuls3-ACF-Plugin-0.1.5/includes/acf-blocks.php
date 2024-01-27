@@ -5,9 +5,9 @@
  * @link https://www.advancedcustomfields.com/resources/blocks/
  */
 
-add_action( 'init', 'demo_acf_blocks_register', 5 );
-add_filter( 'block_categories_all', 'demo_acf_block_category' );
-add_filter( 'acf/blocks/no_fields_assigned_message', 'demo_acf_block_no_fields_msg', 10, 2 );
+add_action( 'init', 'empuls3_blocks_register', 5 );
+add_filter( 'block_categories_all', 'empuls3_block_category' );
+add_filter( 'acf/blocks/no_fields_assigned_message', 'empuls3_block_no_fields_msg', 10, 2 );
 
 /**
  * Register our ACF Blocks.
@@ -18,8 +18,8 @@ add_filter( 'acf/blocks/no_fields_assigned_message', 'demo_acf_block_no_fields_m
  *
  * @since 0.1.1
  */
-function demo_acf_blocks_register() {
-	$blocks = demo_acf_get_blocks();
+function empuls3_blocks_register() {
+	$blocks = empuls3_get_blocks();
 
 	/**
 	 * Loop through /block directory,
@@ -49,18 +49,18 @@ function demo_acf_blocks_register() {
  *
  * @since 0.1.1
  */
-function demo_acf_get_blocks() {
+function empuls3_get_blocks() {
 	// Check for options.
-	$blocks  = get_option( 'demo_acf_blocks' );
-	$version = get_option( 'demo_acf_blocks_version' );
+	$blocks  = get_option( 'empuls3_blocks' );
+	$version = get_option( 'empuls3_blocks_version' );
 
 	if ( empty( $blocks ) || version_compare( DEMO_ACF_VERSION, $version ) || ( function_exists( 'wp_get_environment_type' ) && 'production' !== wp_get_environment_type() ) ) {
 		$blocks = scandir( DEMO_ACF_PLUGIN_BLOCKS );
 		$blocks = array_values( array_diff( $blocks, array( '..', '.', '.DS_Store' ) ) );
 
 		// Update our options.
-		update_option( 'demo_acf_blocks', $blocks );
-		update_option( 'demo_acf_blocks_version', DEMO_ACF_VERSION );
+		update_option( 'empuls3_blocks', $blocks );
+		update_option( 'empuls3_blocks_version', DEMO_ACF_VERSION );
 	}
 
 	return $blocks;
@@ -77,7 +77,7 @@ function demo_acf_get_blocks() {
  *
  * @since 0.1.1
  */
-function demo_acf_block_category( $block_categories ) {
+function empuls3_block_category( $block_categories ) {
 
 	$block_categories = array_merge(
 		array(
@@ -105,7 +105,7 @@ function demo_acf_block_category( $block_categories ) {
  *
  * @since 0.1.1
  */
-function demo_acf_block_no_fields_msg( $message, $block_name ) {
+function empuls3_block_no_fields_msg( $message, $block_name ) {
 	if ( 'acf/phone-number' === $block_name ) {
 		$message = sprintf(
 			/* translators: %s: an admin URL to the field group edit screen */
