@@ -10,6 +10,7 @@
 #---------------------------
 # Ignore all plugins
 /plugins/*
+!/plugins/Empuls3-ACF-Plugin-0.1.5
 #---------------------------
 # MU plugins: these are
 # managed by the platform.
