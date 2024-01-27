@@ -32,7 +32,7 @@ function empuls3_show_acf_admin() {
 		// Our list of allowed email domains.
 		// Be sure to replace with your email domain.
 		$allowed_email_domains = array(
-			'advancedcustomfields.com',
+			'empuls3.com',
 			'wpengine.com',
 			'wpengine.local',
 		);
