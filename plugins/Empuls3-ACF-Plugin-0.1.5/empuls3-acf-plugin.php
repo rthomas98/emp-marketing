@@ -1,16 +1,16 @@
 <?php
 /**
- * Plugin Name:       Demo ACF plugin
- * Description:       A demo WordPress plugin for custom ACF PRO Blocks, Post Types, Options Pages, Taxonomies  and more.
+ * Plugin Name:       Empuls3 ACF plugin
+ * Description:       A WordPress plugin for custom ACF PRO Blocks, Post Types, Options Pages, Taxonomies  and more.
  * Requires at least: 6.4
  * Requires PHP:      7.4
  * Version:           0.1.5
  * Author:            ACF
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       demo-acf
+ * Text Domain:       empuls3
  *
- * @package           demo-acf
+ * @package           empuls3
  */
 
 // Define our handy constants.
