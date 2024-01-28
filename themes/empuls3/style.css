@@ -540,6 +540,14 @@ a:visited {
 	color: #800080;
 }
 
+a:visited.button {
+	color: white;
+}
+
+.logo-text a:visited {
+	color: #231B53;
+}
+
 a:hover,
 a:focus,
 a:active {
