@@ -3,6 +3,7 @@
 #---------------------------
 /themes/*
 !/themes/empuls3
+!/themes/empuls3-theme
 #---------------------------
 # Plugins
 # Check out WPE's Smart
